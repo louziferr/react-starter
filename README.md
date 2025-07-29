@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 1. Clone this repository:
 
 ```bash
-git clone
+git clone https://github.com/louziferr/react-starter.git
 ```
 
 2. Install the requirements:
