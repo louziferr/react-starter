@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
-  return <div className="bg-black text-white">Hello</div>;
+  return <div className="text-white text-3xl">Homepage!</div>;
 }

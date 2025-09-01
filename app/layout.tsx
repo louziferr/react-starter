@@ -14,7 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-w-screen bg-black flex items-center justify-center min-h-screen">
+        <header></header>
         {children}
+        <footer></footer>
       </body>
     </html>
   );
