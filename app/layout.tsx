@@ -22,7 +22,7 @@ export default function RootLayout({
               <Link href="/" className="nav-link">
                 Home
               </Link>
-              <Link href="/" className="nav-link">
+              <Link href="/counting" className="nav-link">
                 Shop
               </Link>
               <Link href="/" className="nav-link">
