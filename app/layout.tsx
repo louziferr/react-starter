@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "React Basics",
@@ -13,8 +14,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-w-screen bg-black flex items-center justify-center min-h-screen">
-        <header></header>
+      <body className="min-w-screen min-h-screen bg-[#8DB0BB]">
+        <header className="m-8 p-2 border-b-2 border-white">
+          <div className="flex justify-between">
+            <div className="bg-white h-10 w-12 rounded-2xl"></div>
+            <nav>
+              <Link href="/" className="nav-link">
+                Home
+              </Link>
+              <Link href="/" className="nav-link">
+                Shop
+              </Link>
+              <Link href="/" className="nav-link">
+                Manage
+              </Link>
+              <Link href="/" className="nav-link">
+                Play
+              </Link>
+            </nav>
+          </div>
+        </header>
         {children}
         <footer></footer>
       </body>

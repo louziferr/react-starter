@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.nav-link {
+  @apply bg-white;
+  @apply px-4;
+  @apply py-2;
+  @apply mx-1;
+  @apply rounded-[0px_20px_20px_20px];
+}
