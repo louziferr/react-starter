@@ -32,4 +32,4 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 ## Figma Design
 
-Follow this [Figma Design](https://www.figma.com/design/VY5srsOsf1T0PRFccewWSf/Website-Browse?node-id=0-1&p=f&t=sBJB7GCbsdAqq0dZ-0)!
+Follow this [Figma Design](https://www.figma.com/design/VY5srsOsf1T0PRFccewWSf/Website-Browse?node-id=0-1&t=BBMIUsZsmxsmQA54-1)!
