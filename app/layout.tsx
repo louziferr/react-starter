@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
@@ -18,7 +19,7 @@ export default function RootLayout({
         <header className="m-8 p-2 border-b-2 border-white">
           <div className="flex justify-between">
             <div className="bg-white h-10 w-12 rounded-2xl"></div>
-            <nav>
+            <nav className="hidden md:block">
               <Link href="/" className="nav-link">
                 Home
               </Link>
@@ -32,6 +33,11 @@ export default function RootLayout({
                 Play
               </Link>
             </nav>
+            <img
+              className="w-8 h-8 md:hidden"
+              src="hamburger.svg"
+              alt="Hamburger Menu"
+            />
           </div>
         </header>
         {children}
