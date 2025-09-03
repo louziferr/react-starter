@@ -35,7 +35,9 @@ export default function ShopPage() {
       </div>
 
       <div className="flex justify-center">
-        <p className="text-3xl mb-10 text-white">Total: {total} EUR</p>
+        <p className="text-3xl mb-10 text-white">
+          Total: {total.toFixed(2)} EUR
+        </p>
       </div>
     </>
   );

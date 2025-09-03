@@ -29,7 +29,7 @@ export default function ShopItem({
 
         <div className="flex justify-center">
           <button
-            className="mt-4 bg-sky-700 text-white py-1 px-14 rounded-xl border-2 border-black"
+            className="mt-4 bg-sky-700 text-white py-1 px-14 rounded-xl border-2 border-black cursor-pointer"
             onClick={buy}
           >
             Buy
