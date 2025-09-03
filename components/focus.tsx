@@ -6,11 +6,23 @@ export default function Focus() {
   const [isEditing, setIsEditing] = useState(false);
   const [focus, setFocus] = useState("Learn programming.");
 
+  function handleKeyDown(event: React.KeyboardEvent) {
+    if (event.key == "Enter") {
+      setIsEditing(false);
+    }
+  }
+
   return (
     <div className="bg-white border-2 border-black p-4 rounded-xl">
       <h2 className="text-rose-700 text-2xl">Focus.</h2>
       {isEditing ? (
-        <div>EDITING!</div>
+        <div>
+          <input
+            className="border-2 border-black rounded-xl py-1 px-2 shadow-inner shadow-gray-200 font-thin"
+            onChange={(e) => setFocus(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+        </div>
       ) : (
         <div className="flex justify-between">
           <div className="text-xl">{focus}</div>
