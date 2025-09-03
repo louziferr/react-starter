@@ -29,7 +29,12 @@ export default function Home() {
         <div className="w-40 h-40 bg-white rounded-xl"></div>
       </div>
 
-      <div className="text-white text-xl text-center mt-8">{weather}</div>
+      <div className="flex justify-center">
+        <div className="bg-white rounded-xl p-2 border-2 border-black mt-8 w-40">
+          <div className="text-center text-2xl text-rose-700">Weather</div>
+          <div className="text-xl text-center">{weather}</div>
+        </div>
+      </div>
     </div>
   );
 }
