@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 interface Card {
   id: number;
   img: number;
+  isRevealed: boolean;
 }
 
 export default function MemoryGame() {
@@ -19,6 +20,7 @@ export default function MemoryGame() {
       cards.push({
         id: i, // id for card (numbers 1-24)
         img: (i % 12) + 1, // img references (numbers 1-12, twice)
+        isRevealed: false,
       });
     }
     // shuffle array
@@ -26,18 +28,26 @@ export default function MemoryGame() {
     setCards(cards);
   }, []); // useEffect runs once when the component is rendered
 
+  function handleCardClick(card: Card) {
+    const updatedCards = cards.map((item) =>
+      item.id == card.id ? { ...card, isRevealed: !item.isRevealed } : item
+    );
+    setCards(updatedCards);
+  }
+
   return (
     <div className="bg-white p-4 rounded">
       <h2 className="text-center text-rose-700 font-bold">Memory Game</h2>
       <div className="grid grid-cols-6 m-4 gap-4">
-        {cards.map((item, index) => (
+        {cards.map((card, index) => (
           <div
             key={index}
             className="w-12 h-12 border-2 border-sky-700 rounded cursor-pointer"
+            onClick={() => handleCardClick(card)}
           >
             <img
-              className="hidden"
-              src={`memory/${item.img}.svg`}
+              className={card.isRevealed ? "" : "hidden"}
+              src={`memory/${card.img}.svg`}
               alt={`Card-Item`}
             />
           </div>
