@@ -3,8 +3,6 @@
 import { useState } from "react";
 
 export default function ToDo() {
-  const currentDate = new Date();
-
   const [todo, setTodo] = useState<string[]>([
     "Make Breakfast",
     "Count Ducks",
@@ -25,8 +23,6 @@ export default function ToDo() {
     }
   }
 
-  // to add a new element use:
-  // setTodo([...todo, newElement])
   return (
     <div className="mt-8 p-4 bg-white rounded-xl border-2 border-black">
       <h2 className="text-rose-700 text-3xl mb-4">ToDo</h2>

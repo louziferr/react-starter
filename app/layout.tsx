@@ -42,7 +42,7 @@ export default function RootLayout({
               <Link href="/manage" className="nav-link">
                 Manage
               </Link>
-              <Link href="/" className="nav-link">
+              <Link href="/play" className="nav-link">
                 Play
               </Link>
             </nav>
